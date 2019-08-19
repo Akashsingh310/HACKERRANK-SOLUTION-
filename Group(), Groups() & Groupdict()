@@ -1,0 +1,8 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+
+m = re.search(r'(?!_)(\d|\w)\1', input())
+if m is not None:
+    print (m.group(0)[0])
+else:
+    print (-1)
