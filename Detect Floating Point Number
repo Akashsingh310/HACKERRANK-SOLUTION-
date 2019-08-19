@@ -1,0 +1,5 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from re import compile
+patt = compile(r'[+-]?\d*\.\d+$')
+ncases = int(input())
+print(*(bool(patt.match(input())) for _ in range(ncases)), sep='\n')
